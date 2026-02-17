@@ -1,0 +1,12 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube Timestamp",
+	"behavior": "append-specific",
+	"noteContentFormat": "- Title: [{{schema:@VideoObject:name}}]({{url}})\n    - Channel: {{schema:@VideoObject:author}}\n    - Timestamp: [{{selector:.ytp-time-current|first}}]({{url|split:\"&t=\"|first}}&t={{selector:.ytp-time-current|first|slice:0,-3|replace:\"\\:\":\"h\"}}m{{selector:.ytp-time-current|first|slice:-2}}s)\n    - Captured: {{time|date:\"YYYY-MM-DD HH:mm:ss\"}}",
+	"properties": [],
+	"triggers": [
+		"https://www.youtube.com/watch?v="
+	],
+	"noteNameFormat": "URLs to check",
+	"path": "30 - Sources/Clippings"
+}

@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube",
+	"behavior": "create",
+	"noteContentFormat": "## About\n\n![{{title}}]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n## Description\n\n{{schema:@VideoObject:description}}\n\n## Notes\n\nYT=",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ss.SSS ZZ\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "reviewed",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@VideoObject:name}}",
+			"type": "text"
+		},
+		{
+			"name": "channel",
+			"value": "{{schema:@VideoObject:author}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{schema:@VideoObject:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "thumbnailUrl",
+			"value": "{{schema:@VideoObject:thumbnailUrl|first}}",
+			"type": "text"
+		},
+		{
+			"name": "duration",
+			"value": "{{schema:@VideoObject:duration|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "watched",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "video, youtube",
+			"type": "multitext"
+		},
+		{
+			"name": "media_link",
+			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com/watch"
+	],
+	"noteNameFormat": "YouTube — {{schema:@VideoObject:author}} — {{schema:@VideoObject:name|safe_name|trim}}",
+	"path": "30 - Sources/Clippings"
+}
