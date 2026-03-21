@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "created",
-			"value": "{{date}}",
+			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSS ZZ"}}",
 			"type": "date"
 		},
 		{
