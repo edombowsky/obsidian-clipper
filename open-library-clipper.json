@@ -30,8 +30,8 @@
 			"type": "text"
 		},
 		{
-			"name": "date-created",
-			"value": "{{date}}",
+			"name": "created",
+			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSS ZZ"}}",
 			"type": "date"
 		},
 		{
