@@ -61,7 +61,7 @@
 		},
 		{
 			"name": "created",
-			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSS ZZ"}}",
+			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSSZZ"}}",
 			"type": "date"
 		},
 		{
