@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "created",
-			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSSZZ"}}",
+			"value": "{{date}}",
 			"type": "date"
 		},
 		{
@@ -38,6 +38,16 @@
 			"name": "tags",
 			"value": "chatgpt/conversation",
 			"type": "multitext"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "types",
+			"value": "[[ChatGPT]]",
+			"type": "multitext"
 		}
 	],
 	"triggers": [
@@ -45,5 +55,5 @@
 		"https://chatgpt.com/c"
 	],
 	"noteNameFormat": "{{title}}",
-	"path": "Clippings"
+	"path": "30 Sources/Clippings"
 }

@@ -1,9 +1,19 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Default",
+	"name": "Wikipedia",
 	"behavior": "create",
-	"noteContentFormat": "## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n### List best points from this page\n{{\"list the best points from this page\"}}\n\n{{content}}",
+	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
 	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "types",
+			"value": "[[Wikipedia]]",
+			"type": "multitext"
+		},
 		{
 			"name": "title",
 			"value": "{{title}}",
@@ -16,13 +26,8 @@
 		},
 		{
 			"name": "author",
-			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
+			"value": "[[Wikipedia]]",
 			"type": "multitext"
-		},
-		{
-			"name": "published",
-			"value": "{{published}}",
-			"type": "date"
 		},
 		{
 			"name": "created",
@@ -33,14 +38,11 @@
 			"name": "description",
 			"value": "{{description}}",
 			"type": "text"
-		},
-		{
-			"name": "categories",
-			"value": "[[Clippings]]",
-			"type": "multitext"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"/^https:\\/\\/[a-z-.]+\\.wikipedia\\.org\\/wiki\\/.*$/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "30 Sources/Clippings"
 }

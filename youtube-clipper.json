@@ -2,72 +2,78 @@
 	"schemaVersion": "0.1.0",
 	"name": "YouTube",
 	"behavior": "create",
-	"noteContentFormat": "## About\n\n![{{title}}]({{schema:@VideoObject:embedUrl|replace:\"embed/\":\"watch?v=\"}})\n\n## Description\n\n{{schema:@VideoObject:description}}\n\n## Notes\n\nYT=",
+	"noteContentFormat": "{{\"Given the YouTube video information and transcript. Analyze and generate the following:\\n## Brief Summary\\n\\nBriefly summarize the video.\\n\\n## Key Takeaways\\n\\nList the key takeaways in the video.\"}}\n\n> [!quote] Brief Summary\n> {{\"Briefly summarize the video\"}}\n\n{{schema:@VideoObject:description|callout:(\"info\",\"Description\",true)}}\n\n##### Media Extended\n- [{{title}}]({{schema:@VideoObject:embedUrl}})\n\n## Timestamp Notes\n{{\"add timestamp notes here, make sure timestamps have Obsidian wikilinks back to YouTube\"}}\n\n```meta-bind-embed\n[[Metabind Extended Media Player Buttons]]\n```\n\n## Best Ideas\n{{\"list the best ideas from the video\"}}\n\n## Tools\n{{\"list any tools from the video that could be applied in real life scenarios\"}}\n\n---\n\n## Reflection\n{{\"what are the key learning points of this video?\"}}\n\n---\n\n## Key Message\n{{\"what is the key message of this video?\"}}\n",
 	"properties": [
 		{
-			"name": "created",
-			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ss.SSS ZZ\\\"}}",
-			"type": "date"
-		},
-		{
-			"name": "reviewed",
-			"value": "",
-			"type": "text"
-		},
-		{
 			"name": "url",
-			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+			"value": "{{url}}",
 			"type": "text"
 		},
 		{
-			"name": "title",
-			"value": "{{schema:@VideoObject:name}}",
-			"type": "text"
-		},
-		{
-			"name": "channel",
-			"value": "{{schema:@VideoObject:author}}",
+			"name": "retrieved",
+			"value": "{{date}}",
 			"type": "text"
 		},
 		{
 			"name": "published",
-			"value": "{{schema:@VideoObject:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+			"value": "{{schema:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
 			"type": "date"
 		},
 		{
-			"name": "thumbnailUrl",
-			"value": "{{schema:@VideoObject:thumbnailUrl|first}}",
+			"name": "title",
+			"value": "{{title}}",
 			"type": "text"
 		},
 		{
-			"name": "duration",
-			"value": "{{schema:@VideoObject:duration|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"name": "description",
+			"value": "{{description}}",
 			"type": "text"
 		},
 		{
-			"name": "watched",
-			"value": "",
+			"name": "channel-name",
+			"value": "{{author|split:\\\", \\\"|first}}",
 			"type": "text"
 		},
 		{
-			"name": "tags",
-			"value": "video, youtube",
-			"type": "multitext"
+			"name": "creator",
+			"value": "{{schema:@VideoObject:author}}",
+			"type": "text"
 		},
 		{
-			"name": "media_link",
+			"name": "source",
 			"value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
 			"type": "text"
 		},
 		{
-			"name": "obsidianUIMode",
-			"value": "preview",
+			"name": "id",
+			"value": "{{url|split:\\\"=\\\"|slice:1}}",
+			"type": "text"
+		},
+		{
+			"name": "duration",
+			"value": "{{selector:#ytd-player .ytp-time-duration}}",
+			"type": "text"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "types",
+			"value": "[[YouTube]]",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "{{schema:@VideoObject:name}}",
 			"type": "text"
 		}
 	],
 	"triggers": [
 		"https://www.youtube.com/watch"
 	],
-	"noteNameFormat": "YouTube — {{schema:@VideoObject:author}} — {{schema:@VideoObject:name|safe_name|trim}}",
-	"path": "30 - Sources/Clippings"
+	"noteNameFormat": "{{schema:@VideoObject:name|safe_name|trim}}",
+	"path": "30 Sources/Clippings",
+	"context": "# {{schema:@VideoObject:name}}\n\n{{schema:@VideoObject:description}}\n\n## Basic Information\n\n- Link: {{schema:@VideoObject:@id}}\n- Channel: {{schema:@VideoObject:author}}\n\n## Transcript\n\n{{selectorHtml:ytd-transcript-segment-renderer.segment-timestamp, ytd-transcript-segment-renderer yt-formatted-string|join:\"\\n\"|markdown}}"
 }

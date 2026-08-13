@@ -5,13 +5,13 @@
 	"noteContentFormat": "",
 	"properties": [
 		{
-			"name": "category",
+			"name": "categories",
 			"value": "[[Places]]",
 			"type": "multitext"
 		},
 		{
-			"name": "type",
-			"value": "",
+			"name": "types",
+			"value": "[[Google Maps]]",
 			"type": "multitext"
 		},
 		{
@@ -25,7 +25,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "location",
+			"name": "coordinates",
 			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
 			"type": "multitext"
 		},
@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "created",
-			"value": "{{time|date:"YYYY-MM-DDTHH:mm:ss.SSSZZ"}}",
+			"value": "{{date}}",
 			"type": "date"
 		},
 		{
@@ -66,18 +66,13 @@
 		},
 		{
 			"name": "tags",
-			"value": "places, to-visit, map",
+			"value": "places, to-visit",
 			"type": "multitext"
-		},
-		{
-			"name": "obsidianUIMode",
-			"value": "preview",
-			"type": "text"
 		}
 	],
 	"triggers": [
 		"https://www.google.com/maps/place/"
 	],
 	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
-	"path": "30 - Sources/Clippings"
+	"path": "30 Sources/Clippings"
 }
