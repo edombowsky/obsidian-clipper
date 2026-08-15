@@ -12,7 +12,7 @@
 		{
 			"name": "types",
 			"value": "[[Wikipedia]]",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "title",
@@ -37,6 +37,11 @@
 		{
 			"name": "description",
 			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "min_to_read",
+			"value": "{{content|strip_md|split:\\\" \\\"|length|calc:\\\"/260\\\"|round}}",
 			"type": "text"
 		}
 	],

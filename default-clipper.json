@@ -38,6 +38,11 @@
 			"name": "categories",
 			"value": "[[Clippings]]",
 			"type": "multitext"
+		},
+		{
+			"name": "min_to_read",
+			"value": "{{content|strip_md|split:\\\" \\\"|length|calc:\\\"/260\\\"|round}}",
+			"type": "text"
 		}
 	],
 	"triggers": [],
