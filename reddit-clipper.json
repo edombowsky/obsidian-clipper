@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Reddit",
+	"behavior": "create",
+	"noteContentFormat": "\n>[!info] \n>Posted in [{{selector:shreddit-post?subreddit-prefixed-name}}](https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}) by [{{selector:shreddit-post?author}}](https://www.reddit.com/user/{{selector:shreddit-post?subreddit-prefixed-name}})\n> Reddit Post: [{{title}}]({{url}})\n\n>[!summary] Thread Title \n>### {{selector:shreddit-post?post-title|trim}}\n\n{{selectorHtml:[property=\"schema:articleBody\"]|markdown|replace:\"/\\\\\\\\-/g\":\"-\"|trim}}\n\n## Comments ({{selector:shreddit-comment-tree?totalcomments}})\n\n{% set autors = selector:faceplate-tracker[noun=\"comment_author\"] a %}\n{% set comments = selectorHtml:div[slot=\"comment\"] %}\n{% set depths = selector:shreddit-comment?depth %}\n\n{% for comment in comments %}\n{% if not comment contains \"AutoModerator\" %}\n{% set niveau = depths[loop.index0] %}\n{% set autor = autors[loop.index0] %}\n{% set txt = comment|markdown|replace:\"/\\\\\\\\-/g\":\"-\"|trim %}\n{% set newline = \"\\n‎ \\n\" %}\n{% if niveau == \"0\" %}\n{{newline}}\n> [!info]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> {{txt|replace:\"\\n\":\"\\n> \"}}\n{% elseif niveau == \"1\" %}\n> \n> > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > {{txt|replace:\"\\n\":\"\\n> > \"}}\n{% elseif niveau == \"2\" %}\n> > \n> > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > {{txt|replace:\"\\n\":\"\\n> > > \"}}\n{% elseif niveau == \"3\" %}\n> > > \n> > > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > > {{txt|replace:\"\\n\":\"\\n> > > > \"}}\n{% else %}\n> > > > \n> > > > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > > > {{txt|replace:\"\\n\":\"\\n> > > > > \"}}\n{% endif %}\n{% endif %}\n{% endfor %}\n\n{{selectorHtml:.rpl-vote-button-group}}",
+	"properties": [
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "subreddit",
+			"value": "https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published|date:YYYY-MM-DD}}",
+			"type": "date"
+		},
+		{
+			"name": "banner",
+			"value": "{{selector:.media-lightbox-img img?src|first ?? selector:gallery-carousel img?src|first ?? \\\"https://redditinc.com/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Lockup_Logo.svg\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "{{selector:shreddit-post?post-title|trim}}",
+			"type": "text"
+		},
+		{
+			"name": "categories",
+			"value": "[[Clippings]]",
+			"type": "multitext"
+		},
+		{
+			"name": "types",
+			"value": "[[Reddit]]",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.reddit.com/"
+	],
+	"noteNameFormat": "Reddit - {{selector:shreddit-post?post-title|trim|safe_name}} - {{selector:shreddit-post?created-timestamp|date:\"YYYY-MM-DD\"}} ",
+	"path": "30 Sources/Clippings"
+}
