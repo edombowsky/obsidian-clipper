@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Default",
 	"behavior": "create",
-	"noteContentFormat": "## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n### List best points from this page\n{{\"list the best points from this page\"}}\n\n{{content}}",
+	"noteContentFormat": ">[!cite]- REFERENCE:\n> {{author}}. [{{title}}]({{url}}) - {{date|date:\"YYYY-MM-DD\"}}\n\n## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n### List best points from this page\n{{\"list the best points from this page\"}}\n\n>[!attention] The following is the content of the above-noted source in its entirety.\n\n{{content}}",
 	"properties": [
 		{
 			"name": "title",
