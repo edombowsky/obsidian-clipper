@@ -68,6 +68,11 @@
 			"name": "aliases",
 			"value": "{{schema:@VideoObject:name}}",
 			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
+			"type": "text"
 		}
 	],
 	"triggers": [

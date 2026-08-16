@@ -42,12 +42,17 @@
 		{
 			"name": "clipped",
 			"value": "{{date}}",
-			"type": "date"
+			"type": "text"
 		},
 		{
 			"name": "publisher",
 			"value": "{{schema:publisher.name|wikilink|join}}",
 			"type": "multitext"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
+			"type": "text"
 		}
 	],
 	"triggers": [

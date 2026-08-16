@@ -27,7 +27,7 @@
 		{
 			"name": "clipped",
 			"value": "{{date}}",
-			"type": "date"
+			"type": "text"
 		},
 		{
 			"name": "description",
@@ -47,6 +47,11 @@
 		{
 			"name": "types",
 			"value": "[[ChatGPT]]",
+			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
 			"type": "text"
 		}
 	],

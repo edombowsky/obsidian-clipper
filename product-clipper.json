@@ -12,7 +12,7 @@
 		{
 			"name": "clipped",
 			"value": "{{date}}",
-			"type": "date"
+			"type": "text"
 		},
 		{
 			"name": "description",
@@ -37,6 +37,11 @@
 		{
 			"name": "image",
 			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
 			"type": "text"
 		}
 	],

@@ -48,6 +48,11 @@
 			"name": "types",
 			"value": "[[Reddit]]",
 			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
+			"type": "text"
 		}
 	],
 	"triggers": [

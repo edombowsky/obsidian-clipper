@@ -1,0 +1,1056 @@
+{
+  "general_settings": {
+    "betaFeatures": false,
+    "legacyMode": false,
+    "openBehavior": "popup",
+    "saveBehavior": "addToObsidian",
+    "showMoreActionsButton": false,
+    "silentOpen": false
+  },
+  "highlighter_settings": {
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "highlight-inline",
+    "highlighterEnabled": true
+  },
+  "migrationVersion": 1,
+  "property_types": [
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{author|split:\", \"|wikilink|join}}",
+      "name": "author",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "type": "date"
+    },
+    {
+      "name": "created",
+      "type": "date"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "defaultValue": "clippings",
+      "name": "tags",
+      "type": "multitext"
+    },
+    {
+      "name": "categories",
+      "type": "multitext"
+    },
+    {
+      "name": "loc",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+      "name": "coordinates",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+      "name": "address",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "url",
+      "type": "text"
+    },
+    {
+      "name": "rating",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+      "name": "scoreGoogle",
+      "type": "number"
+    },
+    {
+      "name": "last",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{meta:property:product:price:amount}}",
+      "name": "price",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{image}}",
+      "name": "image",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{schema:recipeCuisine}}",
+      "name": "cuisine",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{schema:publisher.name|wikilink|join}}",
+      "name": "publisher",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{meta:name:octolytics-dimension-user_login}}",
+      "name": "owner",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:.Layout-sidebar a?href|first}}",
+      "name": "website",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:#repo-stars-counter-star}}",
+      "name": "stars",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{date}}",
+      "name": "URL_Retrieved",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{schema:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+      "name": "URL_Published",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{title}}",
+      "name": "URL_Title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{description}}",
+      "name": "URL_Description",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{author|split:\\\", \\\"|first}}",
+      "name": "Youtube_Channel_Name",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{schema:@BreadcrumbList:itemListElement[0].item.@id}}",
+      "name": "Youtube_Channel_URL",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url|split:\\\"=\\\"|slice:1}}",
+      "name": "Youtube_ID",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:#ytd-player .ytp-time-duration}}",
+      "name": "Youtube_Duration",
+      "type": "text"
+    },
+    {
+      "name": "speakers",
+      "type": "text"
+    },
+    {
+      "name": "retrieved",
+      "type": "text"
+    },
+    {
+      "name": "channel-name",
+      "type": "text"
+    },
+    {
+      "name": "creator",
+      "type": "text"
+    },
+    {
+      "name": "id",
+      "type": "text"
+    },
+    {
+      "name": "duration",
+      "type": "text"
+    },
+    {
+      "name": "types",
+      "type": "text"
+    },
+    {
+      "name": "aliases",
+      "type": "text"
+    },
+    {
+      "name": "reviewed",
+      "type": "datetime"
+    },
+    {
+      "defaultValue": "https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}",
+      "name": "subreddit",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:shreddit-post?created-timestamp|date:\\\"YYYY-MM-DD\\\"}}",
+      "name": "Published",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{title}}",
+      "name": "Aliases",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{\\\"topics in this article, separated by commas\\\"}}",
+      "name": "Topics",
+      "type": "multitext"
+    },
+    {
+      "name": "Related",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{selector:.media-lightbox-img img?src|first ?? selector:gallery-carousel img?src|first ?? \\\"https://redditinc.com/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Lockup_Logo.svg\\\"}}",
+      "name": "cover",
+      "type": "text"
+    },
+    {
+      "defaultValue": "preview",
+      "name": "obsidianUIMode",
+      "type": "text"
+    },
+    {
+      "name": "banner",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{time|date:\\\"YYYY-MM-DDTHH:mmZ\\\"}}",
+      "name": "modified",
+      "type": "datetime"
+    },
+    {
+      "defaultValue": "https://{{domain}}",
+      "name": "host",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{contentHtml|markdown|split:\" \"|length|calc:\"/250\"|round}} ({{highlights|map: item => item.text|join:\"\"|join|split:\" \"|length|calc:\"/250\"|round}})",
+      "name": "min_to_read",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{date}}",
+      "name": "clipped",
+      "type": "text"
+    }
+  ],
+  "reader_settings": {
+    "appearance": "auto",
+    "autoScroll": true,
+    "blendImages": true,
+    "colorLinks": false,
+    "customCss": "",
+    "darkTheme": "same",
+    "defaultFont": "",
+    "followLinks": true,
+    "fontSize": 16,
+    "fonts": [],
+    "highlightActiveLine": true,
+    "lightTheme": "default",
+    "lineHeight": 1.6,
+    "maxWidth": 38,
+    "pinPlayer": true
+  },
+  "stats": {
+    "addToObsidian": 7,
+    "copyToClipboard": 0,
+    "saveFile": 0,
+    "share": 0
+  },
+  "template_17866520420909yu816upt": {
+    "id": "17866520420909yu816upt",
+    "name": "Default",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "30 Sources/Clippings",
+    "noteContentFormat": ">[!cite]- REFERENCE:\n> {{author}}. [{{title}}]({{url}}) - {{date|date:\"YYYY-MM-DD\"}}\n\n## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n### List best points from this page\n{{\"list the best points from this page\"}}\n\n>[!attention] The following is the content of the above-noted source in its entirety.\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1786652042090c8f8szezf",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652042090ky8u0ooo5",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17866520420904drvo5z2i",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652042090pc2kw4gi0",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1786652042090takjakzmz",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652042090j4b3socvo",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "17866527322873k8oopvhz",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786732352812vyesg2vnv",
+        "name": "min_to_read",
+        "value": "{{content|strip_md|split:\\\" \\\"|length|calc:\\\"/260\\\"|round}}",
+        "type": "text"
+      },
+      {
+        "id": "1786873281748ydbs6zsfz",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": []
+  },
+  "template_1786652336499vlvtwya": {
+    "schemaVersion": "0.1.0",
+    "name": "Google Maps",
+    "behavior": "create",
+    "noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
+    "path": "30 Sources/Clippings",
+    "noteContentFormat": "",
+    "properties": [
+      {
+        "id": "1786652336536ui7uxj7",
+        "name": "categories",
+        "value": "[[Places]]",
+        "type": "multitext"
+      },
+      {
+        "id": "17866523365365lzz1bo",
+        "name": "types",
+        "value": "[[Google Maps]]",
+        "type": "text"
+      },
+      {
+        "id": "1786652336536mv76pdz",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652336536dvpsq9m",
+        "name": "loc",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652336536plgzhkx",
+        "name": "coordinates",
+        "value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652336536h23jt6p",
+        "name": "address",
+        "value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652336536ysto13v",
+        "name": "url",
+        "value": "{{selector:div[aria-label^=\\\"Information for\\\"] a[href*=\\\"http\\\"]:href|slice:0,1}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652336536jiqy62l",
+        "name": "rating",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "id": "1786652336536sbphc7y",
+        "name": "scoreGoogle",
+        "value": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+        "type": "number"
+      },
+      {
+        "id": "1786652336536x3dbomy",
+        "name": "description",
+        "value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
+        "type": "text"
+      },
+      {
+        "id": "178665233653649e2m4d",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652336536bmcewzd",
+        "name": "last",
+        "value": "",
+        "type": "date"
+      },
+      {
+        "id": "1786873319096ids8xhfhq",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://www.google.com/maps/place/"
+    ],
+    "id": "1786652336499vlvtwya",
+    "context": ""
+  },
+  "template_1786652373088wo949qh": {
+    "schemaVersion": "0.1.0",
+    "name": "Product",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "30 Sources/Clippings",
+    "noteContentFormat": "{{description}}",
+    "properties": [
+      {
+        "id": "1786652373099awg8xwn",
+        "name": "categories",
+        "value": "[[Products]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652373099zs6e9us",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "17866523730999o9e8dz",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652373099oaac1ef",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17866523730992eqgfff",
+        "name": "title",
+        "value": "{{schema:@Product:name}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652373099srhcc0g",
+        "name": "price",
+        "value": "{{meta:property:product:price:amount}}",
+        "type": "number"
+      },
+      {
+        "id": "1786652373099yzqru24",
+        "name": "image",
+        "value": "{{image}}",
+        "type": "text"
+      },
+      {
+        "id": "1786873330225d7oqa1dmz",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "schema:@Product"
+    ],
+    "id": "1786652373088wo949qh",
+    "context": ""
+  },
+  "template_1786652535887wnyhwcj": {
+    "schemaVersion": "0.1.0",
+    "name": "Recipes",
+    "behavior": "create",
+    "noteContentFormat": "{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list:task}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:task}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+    "properties": [
+      {
+        "id": "178665253589839jxtvz",
+        "name": "categories",
+        "value": "[[Recipes]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652535898jd5qfht",
+        "name": "author",
+        "value": "{{schema:author[*].name|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652535898frxd3dj",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652535898acsnq6v",
+        "name": "image",
+        "value": "{{image}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652535898aly2k96",
+        "name": "rating",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "id": "178665253589803yh4ja",
+        "name": "cuisine",
+        "value": "{{schema:recipeCuisine}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652535898ecpflbc",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17866525358986um272k",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652535898bvl3r5i",
+        "name": "publisher",
+        "value": "{{schema:publisher.name|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1786873344342rk9ebr5ta",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "schema:@Recipe"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "30 Sources/Clippings",
+    "id": "1786652535887wnyhwcj",
+    "context": ""
+  },
+  "template_17866525576431841vib": {
+    "schemaVersion": "0.1.0",
+    "name": "Wikipedia",
+    "behavior": "create",
+    "noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
+    "properties": [
+      {
+        "id": "1786652557645eq74j5e",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786655207441o6h63zqfq",
+        "name": "types",
+        "value": "[[Wikipedia]]",
+        "type": "text"
+      },
+      {
+        "id": "1786652557645c596omr",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652557645k78ftdg",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652557645x31cfhq",
+        "name": "author",
+        "value": "[[Wikipedia]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786652557645cak85tq",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652557645p7ni67x",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1786732793343d3xgf3p5t",
+        "name": "min_to_read",
+        "value": "{{content|strip_md|split:\\\" \\\"|length|calc:\\\"/260\\\"|round}}",
+        "type": "text"
+      },
+      {
+        "id": "17868733737844ac73kpl0",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "/^https:\\/\\/[a-z-.]+\\.wikipedia\\.org\\/wiki\\/.*$/"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "30 Sources/Clippings",
+    "id": "17866525576431841vib",
+    "context": ""
+  },
+  "template_1786652799298dg3yk3p": {
+    "schemaVersion": "0.1.0",
+    "name": "ChatGPT",
+    "behavior": "create",
+    "noteContentFormat": "{{selectorHtml:article[data-testid*=\"conversation-turn\"]|replace:\"/<svg.*?svg>/g\":\"### ChatGPT\\:\"|join:\"\\n\\n\"|markdown|replace:(\"\\\\###\":\"###\", \"##### You said\": \"### You:\")}}\n",
+    "properties": [
+      {
+        "id": "1786652799301uyllepf",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652799301nk4wd3s",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652799301pjcvefw",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "178665279930153blr7n",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "17866527993016kkwgim",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652799301ppsdy7a",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652799301dor3j4z",
+        "name": "tags",
+        "value": "chatgpt/conversation",
+        "type": "multitext"
+      },
+      {
+        "id": "17866528295125rhe075az",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786655192367sei88cgmr",
+        "name": "types",
+        "value": "[[ChatGPT]]",
+        "type": "text"
+      },
+      {
+        "id": "1786873299103518v7843j",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://chatgpt.com/share",
+      "https://chatgpt.com/c"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "30 Sources/Clippings",
+    "id": "1786652799298dg3yk3p",
+    "context": ""
+  },
+  "template_178665293859983o8gqq": {
+    "schemaVersion": "0.1.0",
+    "name": "GitHub Repository",
+    "behavior": "create",
+    "noteContentFormat": "## README\n\n{{selectorHtml:article|markdown}}\n\n",
+    "properties": [
+      {
+        "id": "1786652938614pan313z",
+        "name": "title",
+        "value": "{{selector:#repo-title-component a}}",
+        "type": "text"
+      },
+      {
+        "id": "17866529386144z1s4il",
+        "name": "owner",
+        "value": "{{meta:name:octolytics-dimension-user_login}}",
+        "type": "text"
+      },
+      {
+        "id": "178665293861447v4icc",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652938614zp1alrc",
+        "name": "website",
+        "value": "{{selector:.Layout-sidebar a?href|first}}",
+        "type": "text"
+      },
+      {
+        "id": "178665293861492hoj7n",
+        "name": "description",
+        "value": "{{selector:.Layout-sidebar p|first}}",
+        "type": "text"
+      },
+      {
+        "id": "17866529386143o4of78",
+        "name": "stars",
+        "value": "{{selector:#repo-stars-counter-star}}",
+        "type": "number"
+      },
+      {
+        "id": "17866529386146n566h2",
+        "name": "tags",
+        "value": "github, repo, {{selector:.topic-tag|join:\\\", \\\"}}",
+        "type": "multitext"
+      },
+      {
+        "id": "17866529386145r4obyi",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786652996652t9lwufnmh",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "17866550700980n6q0sat1",
+        "name": "types",
+        "value": "[[GitHub]]",
+        "type": "text"
+      },
+      {
+        "id": "1786873308972zmo3cgfdi",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://github.com/"
+    ],
+    "noteNameFormat": "{{meta:name:octolytics-dimension-user_login}} {{selector:#repo-title-component a}}: {{selector:.Layout-sidebar p|first}}",
+    "path": "30 Sources/Clippings",
+    "id": "178665293859983o8gqq",
+    "context": ""
+  },
+  "template_17866548418409kuad0n": {
+    "schemaVersion": "0.1.0",
+    "name": "YouTube",
+    "behavior": "create",
+    "noteContentFormat": "{{\"Given the YouTube video information and transcript. Analyze and generate the following:\\n## Brief Summary\\n\\nBriefly summarize the video.\\n\\n## Key Takeaways\\n\\nList the key takeaways in the video.\"}}\n\n> [!quote] Brief Summary\n> {{\"Briefly summarize the video\"}}\n\n{{schema:@VideoObject:description|callout:(\"info\",\"Description\",true)}}\n\n##### Media Extended\n- [{{title}}]({{schema:@VideoObject:embedUrl}})\n\n## Timestamp Notes\n{{\"add timestamp notes here, make sure timestamps have Obsidian wikilinks back to YouTube\"}}\n\n```meta-bind-embed\n[[Metabind Extended Media Player Buttons]]\n```\n\n## Best Ideas\n{{\"list the best ideas from the video\"}}\n\n## Tools\n{{\"list any tools from the video that could be applied in real life scenarios\"}}\n\n---\n\n## Reflection\n{{\"what are the key learning points of this video?\"}}\n\n---\n\n## Key Message\n{{\"what is the key message of this video?\"}}\n",
+    "properties": [
+      {
+        "id": "1786654841894s1uwx42",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654841894njuysa3",
+        "name": "retrieved",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654841894s3jochk",
+        "name": "published",
+        "value": "{{schema:uploadDate|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1786654841894ehk9kqy",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654841894vyhk6qx",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654841894jksaody",
+        "name": "channel-name",
+        "value": "{{author|split:\\\", \\\"|first}}",
+        "type": "text"
+      },
+      {
+        "id": "1786655351328ux8xdswxe",
+        "name": "creator",
+        "value": "{{schema:@VideoObject:author}}",
+        "type": "text"
+      },
+      {
+        "id": "1786656628824s8uc5lfll",
+        "name": "source",
+        "value": "{{schema:@VideoObject:embedUrl|replace:\\\"embed/\\\":\\\"watch?v=\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654841894t8wxfqp",
+        "name": "id",
+        "value": "{{url|split:\\\"=\\\"|slice:1}}",
+        "type": "text"
+      },
+      {
+        "id": "178665484189424qttnv",
+        "name": "duration",
+        "value": "{{selector:#ytd-player .ytp-time-duration}}",
+        "type": "text"
+      },
+      {
+        "id": "1786654934926owhj7t9nq",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786655040827q6o8mrksu",
+        "name": "types",
+        "value": "[[YouTube]]",
+        "type": "text"
+      },
+      {
+        "id": "1786656151749tm0do5y0g",
+        "name": "aliases",
+        "value": "{{schema:@VideoObject:name}}",
+        "type": "text"
+      },
+      {
+        "id": "1786873381186t97rfv6p0",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://www.youtube.com/watch"
+    ],
+    "noteNameFormat": "{{schema:@VideoObject:name|safe_name|trim}}",
+    "path": "30 Sources/Clippings",
+    "id": "17866548418409kuad0n",
+    "context": "# {{schema:@VideoObject:name}}\n\n{{schema:@VideoObject:description}}\n\n## Basic Information\n\n- Link: {{schema:@VideoObject:@id}}\n- Channel: {{schema:@VideoObject:author}}\n\n## Transcript\n\n{{selectorHtml:ytd-transcript-segment-renderer.segment-timestamp, ytd-transcript-segment-renderer yt-formatted-string|join:\"\\n\"|markdown}}"
+  },
+  "template_1786731048395vfkfigy": {
+    "schemaVersion": "0.1.0",
+    "name": "Reddit",
+    "behavior": "create",
+    "noteContentFormat": "\n>[!info] \n>Posted in [{{selector:shreddit-post?subreddit-prefixed-name}}](https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}) by [{{selector:shreddit-post?author}}](https://www.reddit.com/user/{{selector:shreddit-post?subreddit-prefixed-name}})\n> Reddit Post: [{{title}}]({{url}})\n\n>[!summary] Thread Title \n>### {{selector:shreddit-post?post-title|trim}}\n\n{{selectorHtml:[property=\"schema:articleBody\"]|markdown|replace:\"/\\\\\\\\-/g\":\"-\"|trim}}\n\n## Comments ({{selector:shreddit-comment-tree?totalcomments}})\n\n{% set autors = selector:faceplate-tracker[noun=\"comment_author\"] a %}\n{% set comments = selectorHtml:div[slot=\"comment\"] %}\n{% set depths = selector:shreddit-comment?depth %}\n\n{% for comment in comments %}\n{% if not comment contains \"AutoModerator\" %}\n{% set niveau = depths[loop.index0] %}\n{% set autor = autors[loop.index0] %}\n{% set txt = comment|markdown|replace:\"/\\\\\\\\-/g\":\"-\"|trim %}\n{% set newline = \"\\n‎ \\n\" %}\n{% if niveau == \"0\" %}\n{{newline}}\n> [!info]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> {{txt|replace:\"\\n\":\"\\n> \"}}\n{% elseif niveau == \"1\" %}\n> \n> > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > {{txt|replace:\"\\n\":\"\\n> > \"}}\n{% elseif niveau == \"2\" %}\n> > \n> > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > {{txt|replace:\"\\n\":\"\\n> > > \"}}\n{% elseif niveau == \"3\" %}\n> > > \n> > > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > > {{txt|replace:\"\\n\":\"\\n> > > > \"}}\n{% else %}\n> > > > \n> > > > > [!quote]+ [{{autor}}](https://www.reddit.com/user/{{autor}}/)\n> > > > > {{txt|replace:\"\\n\":\"\\n> > > > > \"}}\n{% endif %}\n{% endif %}\n{% endfor %}\n\n{{selectorHtml:.rpl-vote-button-group}}",
+    "properties": [
+      {
+        "id": "1786731048396kroky9p",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786731112251gqnl624v6",
+        "name": "subreddit",
+        "value": "https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}",
+        "type": "text"
+      },
+      {
+        "id": "1786731048396apbtgg4",
+        "name": "published",
+        "value": "{{published|date:YYYY-MM-DD}}",
+        "type": "date"
+      },
+      {
+        "id": "1786871167167amy1pqwrn",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "17867310483960bknh1a",
+        "name": "banner",
+        "value": "{{selector:.media-lightbox-img img?src|first ?? selector:gallery-carousel img?src|first ?? \\\"https://redditinc.com/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Lockup_Logo.svg\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "1786731048396n1gcb1j",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1786731096533d1sh17wi8",
+        "name": "aliases",
+        "value": "{{selector:shreddit-post?post-title|trim}}",
+        "type": "text"
+      },
+      {
+        "id": "178673155704659otweq1r",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786731567990f2dde6u8o",
+        "name": "types",
+        "value": "[[Reddit]]",
+        "type": "text"
+      },
+      {
+        "id": "17868733532874oewgnqmq",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://www.reddit.com/"
+    ],
+    "noteNameFormat": "Reddit - {{selector:shreddit-post?post-title|trim|safe_name}} - {{selector:shreddit-post?created-timestamp|date:\"YYYY-MM-DD\"}} ",
+    "path": "30 Sources/Clippings",
+    "id": "1786731048395vfkfigy",
+    "context": ""
+  },
+  "template_1786731498290c1anyee": {
+    "schemaVersion": "0.1.0",
+    "name": "Reddit Post",
+    "behavior": "create",
+    "noteContentFormat": "\n>[!info] \n>Posted in [{{selector:shreddit-post?subreddit-prefixed-name}}](https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}) by [{{selector:shreddit-post?author}}](https://www.reddit.com/user/{{selector:shreddit-post?subreddit-prefixed-name}})\n> Reddit Post: [{{title}}]({{url}})\n\n>[!summary] Thread Title \n>### {{selector:shreddit-post?post-title|trim}}\n\n{{selectorHtml:shreddit-post > div[class=\"text-neutral-content\"]|markdown|callout:(\"quote\", \"Original Post\",false)}}\n\n{{selector:zoomable-img > img?src|image}}\n\n## Comments ({{selector:shreddit-comment-tree?totalcomments}})\n\n{{\"Given all the Reddit comments in the selector:shreddit-comment-tree. Analyze and generate the following:\\n\\nList all the comments with the Author in Heading 3 Markdown with a Link to their https://www.reddit.com/user/ profile after the heading\\n\\nAdd a quote callout with their comments made in markdown like >[!quote].\\n\\n\"}}",
+    "properties": [
+      {
+        "id": "1786731498292modg0m5",
+        "name": "aliases",
+        "value": "{{selector:shreddit-post?post-title|trim}}",
+        "type": "text"
+      },
+      {
+        "id": "17867314982927hoe6xi",
+        "name": "published",
+        "value": "{{selector:shreddit-post?created-timestamp|date:\\\"YYYY-MM-DD\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1786731901564dwxak0lxe",
+        "name": "banner",
+        "value": "{{selector:.media-lightbox-img img?src|first ?? selector:gallery-carousel img?src|first ?? \\\"https://redditinc.com/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Lockup_Logo.svg\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "178673149829230h38dn",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1786731498292upwwkx5",
+        "name": "subreddit",
+        "value": "https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}",
+        "type": "text"
+      },
+      {
+        "id": "1786871101927yucs4p1sf",
+        "name": "clipped",
+        "value": "{{date}}",
+        "type": "text"
+      },
+      {
+        "id": "17867315343424qivuqa7a",
+        "name": "categories",
+        "value": "[[Clippings]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1786731543618bk2sxp1g9",
+        "name": "types",
+        "value": "[[Reddit]]",
+        "type": "text"
+      },
+      {
+        "id": "1786873365458t6bv71snm",
+        "name": "obsidianUIMode",
+        "value": "preview",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://www.reddit.com/"
+    ],
+    "noteNameFormat": "Reddit - {{selector:shreddit-post?post-title|trim|safe_name}} - {{selector:shreddit-post?created-timestamp|date:\"YYYY-MM-DD\"}} ",
+    "path": "30 Sources/Clippings",
+    "id": "1786731498290c1anyee",
+    "context": ""
+  },
+  "template_list": [
+    "17866520420909yu816upt",
+    "1786652799298dg3yk3p",
+    "178665293859983o8gqq",
+    "1786652336499vlvtwya",
+    "1786652373088wo949qh",
+    "1786652535887wnyhwcj",
+    "1786731048395vfkfigy",
+    "1786731498290c1anyee",
+    "17866525576431841vib",
+    "17866548418409kuad0n"
+  ],
+  "vaults": []
+}

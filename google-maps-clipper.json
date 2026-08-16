@@ -57,7 +57,7 @@
 		{
 			"name": "clipped",
 			"value": "{{date}}",
-			"type": "date"
+			"type": "text"
 		},
 		{
 			"name": "last",
@@ -65,9 +65,9 @@
 			"type": "date"
 		},
 		{
-			"name": "tags",
-			"value": "places, to-visit",
-			"type": "multitext"
+			"name": "obsidianUIMode",
+			"value": "preview",
+			"type": "text"
 		}
 	],
 	"triggers": [

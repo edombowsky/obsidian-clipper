@@ -10,9 +10,9 @@
 			"type": "text"
 		},
 		{
-			"name": "Published",
+			"name": "published",
 			"value": "{{selector:shreddit-post?created-timestamp|date:\\\"YYYY-MM-DD\\\"}}",
-			"type": "text"
+			"type": "date"
 		},
 		{
 			"name": "banner",
@@ -20,12 +20,12 @@
 			"type": "text"
 		},
 		{
-			"name": "URL",
+			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
 		},
 		{
-			"name": "Subreddit",
+			"name": "subreddit",
 			"value": "https://www.reddit.com/{{selector:shreddit-post?subreddit-prefixed-name}}",
 			"type": "text"
 		},
@@ -42,6 +42,11 @@
 		{
 			"name": "types",
 			"value": "[[Reddit]]",
+			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
 			"type": "text"
 		}
 	],

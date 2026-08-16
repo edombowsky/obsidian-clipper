@@ -42,7 +42,7 @@
 		{
 			"name": "clipped",
 			"value": "{{date}}",
-			"type": "date"
+			"type": "text"
 		},
 		{
 			"name": "categories",
@@ -52,6 +52,11 @@
 		{
 			"name": "types",
 			"value": "[[GitHub]]",
+			"type": "text"
+		},
+		{
+			"name": "obsidianUIMode",
+			"value": "preview",
 			"type": "text"
 		}
 	],
