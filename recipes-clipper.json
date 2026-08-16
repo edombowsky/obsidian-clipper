@@ -40,7 +40,7 @@
 			"type": "text"
 		},
 		{
-			"name": "created",
+			"name": "clipped",
 			"value": "{{date}}",
 			"type": "date"
 		},

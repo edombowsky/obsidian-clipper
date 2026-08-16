@@ -12,7 +12,7 @@
 		{
 			"name": "types",
 			"value": "[[Google Maps]]",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "source",
@@ -55,7 +55,7 @@
 			"type": "text"
 		},
 		{
-			"name": "created",
+			"name": "clipped",
 			"value": "{{date}}",
 			"type": "date"
 		},

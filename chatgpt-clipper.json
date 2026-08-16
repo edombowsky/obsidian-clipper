@@ -25,7 +25,7 @@
 			"type": "date"
 		},
 		{
-			"name": "created",
+			"name": "clipped",
 			"value": "{{date}}",
 			"type": "date"
 		},
@@ -47,7 +47,7 @@
 		{
 			"name": "types",
 			"value": "[[ChatGPT]]",
-			"type": "multitext"
+			"type": "text"
 		}
 	],
 	"triggers": [

@@ -30,6 +30,11 @@
 			"type": "text"
 		},
 		{
+			"name": "clipped",
+			"value": "{{date}}",
+			"type": "text"
+		},
+		{
 			"name": "categories",
 			"value": "[[Clippings]]",
 			"type": "multitext"

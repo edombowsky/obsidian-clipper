@@ -20,6 +20,11 @@
 			"type": "date"
 		},
 		{
+			"name": "clipped",
+			"value": "{{date}}",
+			"type": "text"
+		},
+		{
 			"name": "banner",
 			"value": "{{selector:.media-lightbox-img img?src|first ?? selector:gallery-carousel img?src|first ?? \\\"https://redditinc.com/hubfs/Reddit%20Inc/Content/Brand%20Page/Reddit_Lockup_Logo.svg\\\"}}",
 			"type": "text"

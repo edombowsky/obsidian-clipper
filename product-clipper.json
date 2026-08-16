@@ -10,7 +10,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "created",
+			"name": "clipped",
 			"value": "{{date}}",
 			"type": "date"
 		},
