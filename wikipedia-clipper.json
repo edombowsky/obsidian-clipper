@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "clipped",
-			"value": "{{date}}",
+			"value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
 			"type": "text"
 		},
 		{

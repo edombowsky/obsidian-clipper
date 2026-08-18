@@ -12,6 +12,35 @@
     "highlightBehavior": "highlight-inline",
     "highlighterEnabled": true
   },
+  "interpreter_settings": {
+    "defaultPromptContext": "",
+    "interpreterAutoRun": false,
+    "interpreterEnabled": true,
+    "interpreterModel": "1786653227628",
+    "models": [
+      {
+        "enabled": true,
+        "id": "1786653227628",
+        "name": "Gemini 3.5 Flash",
+        "providerId": "1786653151764",
+        "providerModelId": "gemini-3.5-flash"
+      },
+      {
+        "enabled": true,
+        "id": "1786653240406",
+        "name": "DeepSeek V4 Flash",
+        "providerId": "1786653111478",
+        "providerModelId": "deepseek-v4-flash"
+      },
+      {
+        "enabled": true,
+        "id": "1786653253532",
+        "name": "GPT-5.6 Sol",
+        "providerId": "1786653135862",
+        "providerModelId": "gpt-5.6-sol"
+      }
+    ],
+  },
   "migrationVersion": 1,
   "property_types": [
     {
@@ -246,7 +275,7 @@
       "type": "text"
     },
     {
-      "defaultValue": "{{date}}",
+      "defaultValue": "{{date|date:\"YYYY-MM-DD\"}}",
       "name": "clipped",
       "type": "text"
     }
@@ -280,7 +309,7 @@
     "behavior": "create",
     "noteNameFormat": "{{title}}",
     "path": "30 Sources/Clippings",
-    "noteContentFormat": ">[!cite]- REFERENCE:\n> {{author}}. [{{title}}]({{url}}) - {{date|date:\"YYYY-MM-DD\"}}\n\n## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n### List best points from this page\n{{\"list the best points from this page\"}}\n\n>[!attention] The following is the content of the above-noted source in its entirety.\n\n{{content}}",
+    "noteContentFormat": ">[!cite]- REFERENCE:\n> {{author}}. [{{title}}]({{url}}) - {{date|date:\"YYYY-MM-DD\"}}\n\n## My Highlights\n{{highlights|map: item => item.text|join:\"\\n\\n\"}}\n\n## List Best Points from This Page\n{{\"list the best points from this page\"}}\n\n>[!attention] The following is the content of the above-noted source in its entirety.\n\n{{content}}",
     "context": "",
     "properties": [
       {
@@ -310,7 +339,7 @@
       {
         "id": "1786652042090takjakzmz",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -411,7 +440,7 @@
       {
         "id": "178665233653649e2m4d",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -450,7 +479,7 @@
       {
         "id": "1786652373099zs6e9us",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -547,7 +576,7 @@
       {
         "id": "17866525358986um272k",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -610,7 +639,7 @@
       {
         "id": "1786652557645cak85tq",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -673,7 +702,7 @@
       {
         "id": "17866527993016kkwgim",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -767,7 +796,7 @@
       {
         "id": "17866529386145r4obyi",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -812,7 +841,7 @@
       {
         "id": "1786654841894njuysa3",
         "name": "retrieved",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -923,7 +952,7 @@
       {
         "id": "1786871167167amy1pqwrn",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
@@ -1010,7 +1039,7 @@
       {
         "id": "1786871101927yucs4p1sf",
         "name": "clipped",
-        "value": "{{date}}",
+        "value": "{{date|date:\\\"YYYY-MM-DD\\\"}}",
         "type": "text"
       },
       {
